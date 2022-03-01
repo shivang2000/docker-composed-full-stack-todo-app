@@ -1,0 +1,6 @@
+[submodule "backend"]
+	path = backend
+	url = git@github.com:shivang2000/dockerised-fullstacktodoappBackend.git 
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:shivang2000/dockerised-full-stack-todo-app-frontend.git

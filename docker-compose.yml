@@ -11,8 +11,6 @@ services:
       - "8000:8000"
     env_file:
       - backend/.env
-    networks:
-      - db-net
     
   frontend:
     build: 
@@ -28,8 +26,6 @@ services:
       - "3000:3000"
     env_file:
       - frontend/.env
-    networks:
-      - db-net
 
   postgresdb:
     image: postgres
@@ -40,9 +36,6 @@ services:
       - postgresdb_data:/var/lib/postgresql/data
     env_file:
       - backend/.env
-    networks:
-      - db-net
 
 volumes:
   postgresdb_data:
-

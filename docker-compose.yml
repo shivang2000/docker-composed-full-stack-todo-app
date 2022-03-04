@@ -1,6 +1,17 @@
 version: '3.9'
 
 services:
+  
+  web_gateway:
+    depends_on:
+      - backend
+      - frontend
+    build:
+      context: ./
+      dockerfile: docker-compose/web_gateway/Dockerfile
+    ports:
+      - "80:80"
+
   backend:
     depends_on:
       - postgresdb
